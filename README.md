@@ -15,7 +15,7 @@ The processed information is later converted into graphs conveniently with the c
 Also note that while demographic statistics are generally for a whole nation, this project will have a small sample size of about 30-50 people and their statistics.
 
 
-	Software Description
+Software Description
 
 		This project uses MongoDB for the database and JavaScript for the front-end. It utilizes the MEAN* Stack which is fully programmable in JavaScript.
 
