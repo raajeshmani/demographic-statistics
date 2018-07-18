@@ -18,6 +18,6 @@ Also note that while demographic statistics are generally for a whole nation, th
 Software Description
 
 		This project uses MongoDB for the database and JavaScript for the front-end.
-  It utilizes the MEAN* Stack which is fully programmable in JavaScript.
+    It utilizes the MEAN* Stack which is fully programmable in JavaScript.
 
 *MEAN stands for MongoDB, Express, Angular and Node.js. It can be implemented flawlessly in a Linux environment and has good uptime.
