@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="http://icons.iconarchive.com/icons/kyo-tux/phuzion/128/Misc-Stats-icon.png">
+
+    <title>Entry</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://getbootstrap.com/docs/4.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="https://getbootstrap.com/docs/4.1/examples/dashboard/dashboard.css" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+    <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="/">Demographic Statistics</a>
+
+      <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search  </button>
+
+    <ul class="navbar-nav px-4 ">
+      <li class="nav-item text-nowrap">
+        <a class="nav-link active" href="#">
+          Sign out
+          <span data-feather="log-out"></span></a>
+      </li>
+    </ul>
+  </nav>
+    <br>
+    <br><br><br><br>
+    <div class="container" id="create">
+        <form name="Create" class="form-horizontal  " action="/addcitizen" method="POST">
+
+            <div class="form-inline justify-content-center">
+                <label class="control-label col-sm-2" for="lname">AadhaarID :</label>
+                <div class="col-sm-6">
+                    <input type="text" name="aadhaarID" id="lastname"
+                    class="form-control" placeholder="Enter 16 Digit AadhaarID" pattern=".{16,16}" required>
+                </div>
+            </div>
+            <br>
+            <div class="form-inline justify-content-center">
+                <label class="control-label col-sm-2" for="fname">FirstName :</label>
+                <div class="col-sm-6">
+                    <input type="text" name="fname" id="firstname"
+                    class="form-control" placeholder="Enter FirstName" required>
+                </div>
+            </div>
+            <br>
+            <div class="form-inline justify-content-center">
+                <label class="control-label col-sm-2" for="lname">LastName :</label>
+                <div class="col-sm-6">
+                    <input type="text" name="lname" id="lastname"
+                    class="form-control" placeholder="Enter LastName" required>
+                </div>
+            </div>
+            <br>
+            <div class="form-inline justify-content-center">
+                <label class="control-label col-sm-2" for="dob">Date of Birth :</label>
+                <div class="col-sm-6">
+                    <input type="date" name="dob" id="date-of-birth" class="form-control" required>
+                </div>
+            </div>
+            <br>
+
+            <div class="form-inline justify-content-center">
+                <label class="control-label col-sm-2" for="gender">Gender :</label>
+                <div class="col-sm-6">
+                    <select class="form-control" id="gender" name="gender">
+                        <option value="male">Male</option><br>
+                        <option value="female">Female</option><br>
+                        <option value="other">Other</option><br>
+                    </select>
+                </div>
+            </div>
+            <br>
+            <div class="form-inline justify-content-center">
+                <label class="control-label col-sm-2" for="state">State :</label>
+                <div class="col-sm-6">
+                    <input type="text" name="state" id="state" class="form-control"  placeholder="Enter State" required>
+                </div>
+            </div>
+            <br>
+            <div class="form-inline justify-content-center">
+                <label class="control-label col-sm-2" for="email">Email :</label>
+                <div class="col-sm-6">
+                    <input type="email" name="email" id="email" class="form-control" placeholder="Enter Email" required>
+                </div>
+            </div>
+            <br>
+
+            <div class="form-inline justify-content-center">
+                <label class="control-label col-sm-2" for="dod">Date of Death :</label>
+                <div class="col-sm-6">
+                    <input type="date" name="dod" id="date-of-death" class="form-control">
+                </div>
+            </div>
+            <br>
+            <br>
+
+            <div class="form-inline justify-content-center">
+                <div class="col-lg-offset-2 col-lg-4">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+        </form>
+
+
+    </div>
+
+
+</body>
+
+</html>

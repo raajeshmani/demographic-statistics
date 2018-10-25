@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="http://icons.iconarchive.com/icons/kyo-tux/phuzion/128/Misc-Stats-icon.png">
+
+    <title>Entry</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://getbootstrap.com/docs/4.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="https://getbootstrap.com/docs/4.1/examples/dashboard/dashboard.css" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+    <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="/">Demographic Statistics</a>
+
+      <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search  </button>
+
+    <ul class="navbar-nav px-4 ">
+      <li class="nav-item text-nowrap">
+        <a class="nav-link active" href="#">
+          Sign out
+          <span data-feather="log-out"></span></a>
+      </li>
+    </ul>
+  </nav>
+    <br>
+    <br><br><br><br>
+    <div class="container" id="create">
+        <form name="Create" class="form-horizontal" action="/addjob" method="POST">
+        <input style="display:none" name="aadhaarID" value="<%=aadhaarID%>">
+
+            <div class="form-inline justify-content-center">
+                <label class="control-label col-sm-2" for="position">Position :</label>
+                <div class="col-sm-6">
+                    <input type="text" name="position" id="position"
+                    class="form-control" placeholder="Enter position">
+                </div>
+            </div><br>
+
+            <div class="form-inline justify-content-center">
+                <label class="control-label col-sm-2" for="department">Department :</label>
+                <div class="col-sm-6">
+                    <input type="text" name="department" id="department"
+                    class="form-control" placeholder="Enter department" >
+                </div>
+            </div><br>
+
+
+            <div class="form-inline justify-content-center">
+                <label class="control-label col-sm-2" for="company">Company :</label>
+                <div class="col-sm-6">
+                    <input type="text" name="company" id="company"
+                    class="form-control" placeholder="Enter company" >
+                </div>
+            </div><br>
+
+
+            <div class="form-inline justify-content-center">
+                <label class="control-label col-sm-2" for="salary">Salary :</label>
+                <div class="col-sm-6">
+                    <input type="text" name="salary" id="salary" 
+                    class="form-control" placeholder="Enter salary" >
+                </div>
+            </div><br>
+
+
+
+            <div class="form-inline justify-content-center">
+                <label class="control-label col-sm-2" for="date-of-employment">Date of Employment :</label>
+                <div class="col-sm-6">
+                    <input type="date" name="doe" id="date-of-employment" class="form-control" >
+                </div>
+            </div><br>
+
+            <div class="form-inline justify-content-center">
+                <label class="control-label col-sm-2" for="EmpID">Your EmpID:</label>
+                    <div class="col-sm-6">
+                        <input type="text" name="empID" id="EmpID"
+                        class="form-control" placeholder="Enter Employee ID"
+                            >
+                    </div>
+            </div><br>
+
+
+
+
+            <div class="form-inline justify-content-center">
+                <div class="col-sm-offset-2 col-sm-6">
+                    <button name="isSkip" type="submit" class="btn btn-primary" value="false">Submit</button>
+                    <button name="isSkip" type="submit" class="btn btn-warning" value="true">No Job Yet? Skip this page but not the interviews</button>
+
+                </div>
+            </div>
+        </form>
+
+
+    </div>
+
+</body>
+
+</html>

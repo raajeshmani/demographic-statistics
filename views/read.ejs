@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>User Details</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<br>
+<div class="container">
+  <table class="table table-bordered">
+    <thead class="black white-text">
+      <tr>
+        <th>AadhaarID</th>
+        <th>FirstName</th>
+        <th>LastName</th>
+        <th>DOB</th>
+        <th>Gender</th>
+        <th>State</th>
+        <th>Email</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% for(var i=0;i<displayData.length;i++){ %>
+      <tr>
+        <td><%=displayData[i].aadhaarID%></td>
+        <td><%=displayData[i].fname%></td>
+        <td><%=displayData[i].lname%></td>
+        <td><%=displayData[i].dob%></td>
+        <td><%=displayData[i].gender%></td>
+        <td><%=displayData[i].state%></td>
+        <td><%=displayData[i].email%></td>
+        <td>
+        <form action="/update" method="POST" style="display:inline-block">
+            <button class="btn btn-success"
+                    name="updateByFname"
+                    value="<%=displayData[i].aadhaarID%>">Update</button>
+          </form>
+          <form action="/delete" method="POST" style="display:inline-block">
+            <button class="btn btn-danger"
+                    name="deleteByFname"
+                    value="<%=displayData[i].aadhaarID%>">Delete</button>
+          </form>
+
+        </td>
+      </tr>
+      <% }%>
+    </tbody>
+  </table>
+
+  <a href="/" class="btn btn-primary">Home</a>
+
+</div>
+</body>
+</html>
