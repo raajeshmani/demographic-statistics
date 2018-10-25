@@ -1,4 +1,4 @@
-# demographic-statistics-dbms
+# Demographic Statistics implemented using MEAN Stack 
 
 **ABSTRACT**
 
