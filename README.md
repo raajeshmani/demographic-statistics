@@ -25,9 +25,31 @@ SOFTWARE DESCRIPTION
 
 HOME PAGE
 
+
 ![home](https://user-images.githubusercontent.com/17880433/47487621-67848c00-d860-11e8-9e3c-b2fb8e99cd43.png)
 
 
 BAR CHART
 
+
 ![main ui](https://user-images.githubusercontent.com/17880433/47487715-93a00d00-d860-11e8-9e8f-231984b818f3.png)
+
+
+INSTALLATION INSTRUCTIONS
+
+Initializing ...
+
+	npm init
+	
+Install the required dependencies
+
+	npm install [depds]
+	
+Start MongoDB Service
+	
+	sudo systemctl start mongodb.service
+	
+Start Nodemon
+	
+	nodemon server.js
+	
