@@ -44,6 +44,11 @@ Initializing ...
 Install the required dependencies
 
 	npm install [depds]
+
+OR use this if package.json file has dependencies in it already
+
+	npm install 
+	
 	
 Start MongoDB Service
 	
