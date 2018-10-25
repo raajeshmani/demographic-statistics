@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="http://icons.iconarchive.com/icons/kyo-tux/phuzion/128/Misc-Stats-icon.png">
+
+  <title>Pie Chart</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="https://getbootstrap.com/docs/4.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="https://getbootstrap.com/docs/4.1/examples/dashboard/dashboard.css" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+    <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="/">Demographic Statistics</a>
+
+    <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search  </button>
+
+    <ul class="navbar-nav px-4 ">
+      <li class="nav-item text-nowrap">
+        <a class="nav-link active" href="#">
+          Sign out
+          <span data-feather="log-out"></span></a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+          <div class="sidebar-sticky">
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a class="nav-link " href="/">
+                  <span data-feather="home"></span>
+                  Dashboard <span class="sr-only">(current)</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/newcitizen">
+                  <span data-feather="users"></span>
+                  Add Data
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/bar-education">
+                  <span data-feather="bar-chart-2"></span>
+                  Bar Chart
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/pie-sex-ratio">
+                  <span data-feather="pie-chart"></span>
+                  Pie Chart
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/read">
+                  <span data-feather="bar-chart-2"></span>
+                  Reports
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span data-feather="layers"></span>
+                  Integrations
+                </a>
+              </li>
+            </ul>
+
+            <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+              <span>Saved reports</span>
+              <a class="d-flex align-items-center text-muted" href="#">
+                <span data-feather="plus-circle"></span>
+              </a>
+            </h6>
+            <ul class="nav flex-column mb-2">
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span data-feather="file-text"></span>
+                  Current month
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span data-feather="file-text"></span>
+                  Last quarter
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span data-feather="file-text"></span>
+                  Social engagement
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span data-feather="file-text"></span>
+                  Year-end sale
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+
+          <!-- Example single danger button -->
+          <div class="btn-group">
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Charts
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="/pie-sex-ratio">Sex Ratio</a>
+              <a class="dropdown-item" href="/pie-marriage-ratio">Marriage Ratio</a>
+              <a class="dropdown-item" href="/bar-salary-population">Salary-wise Population</a>
+            </div>
+          </div>
+
+
+          <canvas class="my-4 w-100" id="pie-chart" width="900" height="380"></canvas>
+
+        </main>
+
+
+
+
+
+
+        <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script> -->
+        <!-- <script src="../../assets/js/vendor/popper.min.js"></script>
+        <script src="../../dist/js/bootstrap.min.js"></script> -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+        <script>
+        new Chart(document.getElementById("pie-chart"), {
+          type: 'pie',
+          data: {
+            labels: ["Married", "Never Married", "Divorced"],
+            datasets: [{
+              label: "No. of People belonging to",
+              backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f"],//,"#e8c3b9","#c45850"],
+              data: [<%=married%>,<%=neverMarried%>,<%=divorced%>]
+            }]
+          },
+          options: {
+            title: {
+              display: true,
+              text: 'Marriage Ratio'
+            }
+          }
+        });
+        </script>
+        <!-- Icons -->
+        <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
+        <script>
+        feather.replace()
+        </script>
+      </body>
+      </html>
